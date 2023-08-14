@@ -1,0 +1,49 @@
+/*
+
+  Variables
+  +
+
+*/
+// Colours
+//Black
+$black: #000;
+$dark-gray:#303030;
+
+
+//White
+$white: #fff;
+
+//Red
+$soft-red: #dc535b;
+$medium-red: #c9373f;
+
+// Base
+$base-line-height: 1.7;
+
+//Google font
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap);
+
+//Typekit font
+
+//Fonts
+$font-stack: 'Inter', Helvetica, sans-serif;
+
+// Weights
+$hairline-weight: 100;
+$thin-weight:     200;
+$light-weight:    300;
+$normal-weight:   400;
+$medium-weight:   500;
+$semibold-weight: 600;
+$bold-weight:     700;
+$xbold-weight:    800;
+$black-weight:    900;
+
+//Text Transform
+$text-cap: capitalize; 
+$text-lower: lowercase;
+$text-upper: uppercase;
+$text-none: none;
+
+// width
+$width: 111rem;
