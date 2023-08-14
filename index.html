@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#11998e">
+  <meta name="author" content="Tim Green">
+
+  <!-- dns prefetch -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//kit.fontawesome.com">
+  <!-- Preload -->
+  <link rel="preload" href="assets/build/app.min.css" as="style">
+  <!-- Style for App -->
+  <link rel="stylesheet" href="assets/build/app.min.css">
+
+  <title>Clock App</title>
+  <!-- Tim Green -->
+</head>
+<body>
+
+    <h1 class="sr-only">
+        Clock App
+    </h1>
+
+    <div class="background"></div>
+    <main class="top-widgets">
+        <!-- quote -->
+        <article class="quote-wrapper">
+            <div class="quote-wrapper__random">
+                <quote id="quote"></quote>
+                <h2 class="author"></h2>
+            </div>
+
+            <button id="refresh">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H336 304v64h32H464h32V192 64 32H432V64v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4l60.4 21.3zM80 396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7l-60.4-21.3c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H176h32V288H176 48 16v32V448v32H80V448 396.9z"/></svg><span class="sr-only">Click the refresh icon</span></button>
+        </article>
+
+        <!-- it currently -->
+        <article class="currently">
+            <div class="widgets-wrapper">
+                <header>
+                    <img class="icon">
+                    <h2 class="currently__greeting"></h2><span>, it's currently</span>
+                </header>
+
+                <section class="currently__time">
+                    <div class="time-wrapper">
+                        <h2 class="time-now"></h2>
+                        <div class="standard-time">
+                            <p class="period"></p>
+                            <p class="region"></p>
+                        </div>
+                    </div>
+                    <!-- <h3 class="currently__location">in </h3> -->
+                </section>
+            </div>
+
+            <button class="expand">More<img src="./assets/images/circle-arrow-up-solid.svg" alt="arrow icon" aria-hidden="true" class="arrow">
+            </button>
+        </article>
+    </main>
+
+    <article class="details">
+        <ul class="details__contents">
+            <li class="details__region info">
+                <h4>current timezone</h4>
+                <p id="timezone"></p>
+            </li>
+            <li class="details__day info">
+                <h4>day of the year</h4>
+                <p id="year-day"></p>
+            </li>
+            <li class="details__week-day info">
+                <h4>no. day of the week</h4>
+                <p id="week-day"></p>
+            </li>
+            <li class="details__week-number info">
+                <h4>week number</h4>
+                <p id="week-number"></p>
+            </li>
+        </ul>
+    </article>
