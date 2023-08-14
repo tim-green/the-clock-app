@@ -1,0 +1,31 @@
+/*
+ * Theme
+ *** For
+ * Day &
+ * Night
+ */
+
+ .day {
+    background-image: url(../images/bg-image-daytime.webp);
+  
+    @include med {
+      background-image: url(../images/bg-image-daytime.webp);
+    }
+  
+    @include lg {
+      background-image: url(../images/bg-image-daytime.webp);
+    }
+  }
+  
+  .night {
+    background-image: url(../images/bg-image-nighttime.webp);
+  
+    @include med {
+      background-image: url(../images/bg-image-nighttime.webp);
+    }
+  
+    @include lg {
+      background-image: url(../images/bg-image-nighttime.webp);
+    }
+  }
+  
