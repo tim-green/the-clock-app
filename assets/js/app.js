@@ -40,3 +40,16 @@ function getTime() {
     }
       document.querySelector('.currently__greeting').textContent = `good ${greet}`
 
+    //get the background and icon
+    if (hour >= 5 && hour <= 17 ) {
+		background.classList.add('day');
+		icon.src = 'assets/images/icon-sun.svg';
+		icon.setAttribute("alt", "sun icon");
+	} else {
+		background.classList.add('night');
+		icon.src = 'assets/images/icon-moon.svg';
+		icon.setAttribute("alt", "moon icon");
+		details.style.color = '#fff';
+		details.style.background = 'rgba(0, 0, 0, 0.75)';
+	}
+
