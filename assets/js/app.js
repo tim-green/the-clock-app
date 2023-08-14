@@ -92,3 +92,20 @@ function getTimeZone() {
     .catch(err => console.error(err));
   }
 
+// function to get location from the user IP no.
+function getLocation() {
+    axios.get('https://freegeoip.app/json/')
+    .then((locationRes) => {
+      const ipLocation = locationRes.data;
+      const regionName = ipLocation.region_name;
+      const countryCode = ipLocation.country_code;
+      document.querySelector('.currently_location').textContent = `in ${regionName}, ${countryCode}`;
+    })
+    .catch(err => console.error(err));
+  }
+
+  getTime();
+  getQuote();
+  getTimeZone();
+  getLocation()
+
