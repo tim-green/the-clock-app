@@ -18,3 +18,55 @@
   }
 }
 
+// Selected text styles
+::selection {
+  color: $black;
+  background-color: tint-color($white, 15%);
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  // scroll-behavior: smooth;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: $font-stack;
+  color: $white;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
