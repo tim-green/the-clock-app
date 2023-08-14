@@ -22,3 +22,21 @@ function getQuote() {
     }).catch((err) => console.error(err))
   }
 
+// function to get the time
+function getTime() {
+    let currentTime = new Date();
+    let hour = currentTime.getHours()
+    let minute = currentTime.getMinutes();
+
+    //get the time of the day
+    let greet = '';
+    if (hour >= 5 && hour <= 11) {
+      greet = 'orning';
+    } else if (hour >= 12 && hour <= 17) {
+      greet = 'afternoon';
+    } 
+    else {
+      greet = 'evening';
+    }
+      document.querySelector('.currently__greeting').textContent = `good ${greet}`
+
