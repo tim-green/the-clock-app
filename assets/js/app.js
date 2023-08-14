@@ -76,3 +76,19 @@ function getTime() {
     setTimeout(getTime,interval)
 }
 
+// function to get the time zone from worldtimeapi
+function getTimeZone() {
+    axios.get('https://worldtimeapi.org/api/ip')
+    .then((regionRes) => {
+      const region = regionRes.data;
+      //Local timezone
+      document.querySelector('.region').textContent = region.abbreviation
+      //Details
+      document.getElementById('timezone').textContent = region.timezone;
+      document.getElementById('year-day').textContent = region.day_of_year;
+      document.getElementById('week-day').textContent = region.day_of_week;
+      document.getElementById('week-number').textContent = region.week_number;
+    })
+    .catch(err => console.error(err));
+  }
+
