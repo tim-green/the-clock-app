@@ -53,3 +53,26 @@ function getTime() {
 		details.style.background = 'rgba(0, 0, 0, 0.75)';
 	}
 
+    // get time and setup it
+    if(minute < 10){
+        minute = "0" + minute
+        }
+      
+      if (hour === 0) {
+        hour = 12
+        period.textContent = "am";
+      } else if (hour === 12) {
+        period.textContent = "pm";
+      } else if (hour > 12) {
+        hour -= 12;
+        period.textContent = "pm";
+      } else {
+        period.textContent = "am";
+        }
+        document.querySelector(".time-now").textContent = `${hour}:${minute}`;
+
+    //update the time
+    let interval = (60 - (new Date()).getSeconds()) * 1000 + 5;
+    setTimeout(getTime,interval)
+}
+
