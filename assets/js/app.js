@@ -31,7 +31,7 @@ function getTime() {
     //get the time of the day
     let greet = '';
     if (hour >= 5 && hour <= 11) {
-      greet = 'orning';
+      greet = 'morning';
     } else if (hour >= 12 && hour <= 17) {
       greet = 'afternoon';
     } 
